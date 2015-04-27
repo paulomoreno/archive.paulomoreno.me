@@ -16,6 +16,10 @@ urlpatterns = patterns('',
         url(r'^bandejao/$','main.views.bandejao',name='bandejao'),
         url(r'^en/bandejao/$','main.views.bandejao', {'lang': 'en'}, name='bandejao_en'),
 
+        #Bandejao App
+        url(r'^bandejao/app/$','main.views.bandejao_app',name='bandejao_app'),
+        url(r'^en/bandejao/app/$','main.views.bandejao_app', {'lang': 'en'}, name='bandejao_app_en'),
+
 	#Kinnav
         url(r'^kinnav/$','main.views.kinnav',name='kinnav'),
         url(r'^en/kinnav/$','main.views.kinnav', {'lang': 'en'}, name='kinnav_en'),

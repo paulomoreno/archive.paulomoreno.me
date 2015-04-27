@@ -28,6 +28,18 @@ def bandejao(request, lang='pt-br'):
     else:
         return render_to_response('main/bandejao/index.html', {'lang' : lang }, context)
 
+def bandejao_app(request, lang='pt-br'):
+    '''
+    Returns Bandejao App page
+    '''
+    context = RequestContext(request)
+
+    if lang != 'pt-br' and land != 'en':
+        raise Http404
+
+    else:
+        return render_to_response('main/bandejao_app/index.html', {'lang' : lang }, context)
+
 def das(request, lang='pt-br'):
     '''
     Returns Index page
