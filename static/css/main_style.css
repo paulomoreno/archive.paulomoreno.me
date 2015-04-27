@@ -1,0 +1,95 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.center_ctr{
+	width: 60%;
+	max-width: 1680px;
+	min-width: 550px;
+	height: 128px;
+
+	margin: auto;
+	margin-top: 4%;
+}
+
+.center{
+	height: 128px;
+	width: 500px;
+
+	float:right;
+
+	color: white;
+	font-weight: 400;
+	text-shadow: 0 0 2px #000000;
+}
+
+.center_img{
+	height: 128px;
+	width: 128px;
+	border-radius: 100%;
+	border: 2px solid rgba(255,255,255,0.8);
+	float: left;
+
+	margin-left: 6%;
+	margin-right: 4%;
+}
+
+.center_text_big{
+	font-size: 26pt;
+}
+
+.center_text_small{
+	font-size: 12pt;
+}
+.m_btm_ctr{
+	width: 60%;
+	min-width: 550px;
+	height: 90%;
+	margin: auto;
+}
+
+.m_btm_left{
+	height: 60%;
+	width: 22%;
+	padding: 6%;
+	float:left;
+}
+
+.quote{
+	color: #002200;
+	font-size: 12pt;
+	background-size: ;
+}
+
+.quote_ii{
+	margin-left: -10px;
+	max-width: 30px;
+	height: auto;
+}
+
+.quote_ii ~ .quote_ii {
+	max-width: 20px;
+	margin-left: 0;
+	transform:scale(-1,-1);
+	-ms-transform:scale(-1,-1); /* IE 9 */
+	-webkit-transform:scale(-1,-1); /* Safari and Chrome */
+	float: right;
+}
+
+.m_btm_right{
+	height: 60%;
+	width: 52%;
+	padding: 6%;
+	float:right;
+}
+
+.m_subtitle{
+	color: #555555;
+	font-weight: 400;
+	font-size: 20pt;
+}
+
+.m_text{
+	color: #444444;
+	font-size: 14pt;
+}
+

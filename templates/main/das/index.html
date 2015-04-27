@@ -1,0 +1,175 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block css %}
+  <link rel="stylesheet" type="text/css" href="{% static "css/das.css" %}">
+{% endblock %}
+
+{% block title %} - DAS{% endblock %}
+
+{% block content %}
+  <section class="feature_top">
+    <div class="img"><span><img src="{% static "img/das_icon.png" %}" alt="das logo">DAS</span></div>
+    <p>Sistema de agendamento de consultas via web. Agende consultas médicas de qualquer lugar!</p>
+    <p>Sistema de gerenciamento de filas</p>
+    <div class="btn">
+      <a href="#como_funciona">SAIBA MAIS</a><br/><br/><br/>
+      <a href="https://das.paulomoreno.me">ACESSE AGORA</a>
+    </div>
+  </section>
+
+  <div class="btm_l1"></div>
+  <div class="btm_l2"></div>
+
+  <section class="feature first" id="como_funciona">
+
+    <h1>Como funciona?</h1>
+    <div class="linha"></div>
+    <div class="linha hr2"></div>
+
+      <div class="cf_center">
+
+        <div class="col-md-3">
+          <div class="quadrado">
+            <img src="{% static "img/das/reserva.png" %}" width="200">
+          </div>
+          <p>Qualquer paciente marca sua consulta atraves do site</p>
+        </div>
+
+        <div class="col-md-3">
+          <div class="quadrado">
+            <div class="q_l1">
+              <img src="{% static "img/das/medico_icon.png" %}" alt="medico" width="60">
+              <span class="mais">+</span>
+              <img src="{% static "img/das/calendario_icon.png" %}" alt="calendario" width="60">
+            </div>
+            <img src="{% static "img/das/qrCode_icon.png" %}" alt="qrcode" width="40">
+          </div>
+          <p>Cada consulta gera um QRCode unico</p>
+        </div>
+
+        <div class="col-md-1">
+          <div class="quadrado">
+            <img class="seta" src="{% static "img/das/seta.png" %}" alt="seta" width="50">
+          </div>
+        </div>
+
+        <div class="col-md-2">
+          <div class="quadrado">
+            <img src="{% static "img/das/phone_icon.png" %}" alt="telefone" width="150">
+          </div>
+          <p> Check-in via QRCode</p>
+        </div>
+
+        <div class="col-md-1">
+          <div class="quadrado">
+            <img class="seta" src="{% static "img/das/seta.png" %}" alt="seta" width="50">
+          </div>
+        </div>
+
+        <div class="col-md-2">
+          <div class="quadrado">
+            <img src="{% static "img/das/fila_icon.png" %}" alt="fila" width="100">
+          </div>
+          <p>Fila de espera em tempo-real</p>
+        </div>
+      </div>
+
+      <div class="clear"></div>
+
+  </section>
+
+  <section class="feature">
+    <h1 class="mrg">Sobre o projeto</h1>
+    <div class="linha"></div>
+    <div class="linha hr2"></div>
+
+    <div class="cf_center">
+
+      <br />
+
+      <p class="tu_p">O DAS foi um projeto desenvolvido durante a disciplina de Tópicos Avançados em Comunicação, ministrada pelo Professor Doutor Edson dos Santos Moreira.</p>
+      <br />
+
+      <div class="tu_row">
+
+        <div class="tu_left"> 
+          <h2>Tecnologias Utilizadas</h2>
+          <div class="tu_row">
+            <div class="tu_left"> 
+              <h3>Backend</h3>
+              <ul>
+                <li><a href="http://nginx.org">Nginx</a></li>
+                <li><a href="https://www.djangoproject.com">Django</a></li>
+                <li><a href="https://www.djangoproject.com">Gunicorn</a></li>
+              </ul>
+            </div>
+            <div class="tu_left"> 
+              <h3>Frontend</h3>
+              <ul>
+                <li><a href="http://jquery.com">JQuery</a></li>
+                <li><a href="http://getbootstrap.com">Bootstrap</a></li>
+                <li><a href="http://www.w3.org/TR/html5/">HTML5</a></li>
+                <li><a href="http://www.w3.org/TR/CSS/">CSS3</a></li>
+              </ul>
+            </div>
+            <div class="tu_clear"></div>
+          </div>
+        </div>
+
+        <div class="tu_left">
+          <p>Página do Projeto</p>
+          <p><a href="https://das.paulomoreno.me"><img class="ghicon" src="{% static "img/GitHub_Logo.png" %}" alt="github logo"></a></p>
+        </div>
+        <div class="tu_clear"></div>
+      </div>
+    </div>
+
+  </section>
+
+  <!--
+  <section class="feature last">
+    <h1>Membros</h1>
+    <div class="linha"></div>
+    <div class="linha hr2"></div>
+
+    <div class="tu_row">
+      <br/>
+      <div class="membro">
+        <img src="/img/me.jpg">
+        <h3>Paulo Moreno</h3>
+        <h4> </h4>
+      </div>
+
+      <div class="membro">
+        <img src="img/user.png">
+        <h3>Rodrigo Pereira</h3>
+        <h4> </h4>
+      </div>
+
+      <div class="membro">
+        <img src="img/user.png">
+        <h3>Matheus Compri</h3>
+        <h4> </h4>
+      </div>
+
+      <div class="membro">
+        <img src="img/user.png">
+        <h3>Vinicius Lovato</h3>
+        <h4> </h4>
+      </div>
+
+      <div class="membro">
+        <img src="img/user.png">
+        <h3>Thais</h3>
+        <h4> </h4>
+      </div>
+
+      <div class="tu_clear"></div>
+
+    </div>
+
+  </section>
+  -->
+{% endblock %}
+

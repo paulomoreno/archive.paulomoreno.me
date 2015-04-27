@@ -1,0 +1,86 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" type="text/css" href="{% static "css/style.css" %}">
+  <link rel="stylesheet" type="text/css" href="{% static "css/main_style.css" %}">
+  <link rel="stylesheet" type="text/css" href="{% static "css/footer_style.css" %}">
+
+  {% block css%}{% endblock %}
+
+  {% block javascript%}{% endblock %}
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-28541804-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+	<title>Paulo Moreno{% block title%}{% endblock %}</title>
+
+</head>
+<body>
+
+  <header>
+    <div class="h_center">
+
+      <div class="logo">Pmoreno</div>
+
+      <nav>
+          <a href="/#contact">Contato</a>
+          <a href="/#projects">Projetos</a>
+          <a href="/">Início</a>
+      </nav>
+
+    </div>
+  </header>
+
+  {% block content %}{% endblock %}
+  
+  <div class="ftr_l1"></div>
+  <div class="ftr_l2"></div>
+
+  <footer>
+    <div>
+      <ul class="site_map">
+        <li>
+          <h1><a href="/">Início</a></h1></br>
+        </li> 
+        <li>
+          <h1><a href="/#projects">Projetos</a></h1></br>
+          <a href="/bandejao/">Bandejao</a></br>
+          <a href="http://blubel.me">Blubel</a></br>
+          <a href="/comparando/">Comparando</a></br>
+          <a href="/das/">DAS</a></br>
+          <a href="/kinnav/">KINNAV</a></br>
+        </li> 
+        <li>
+          <h1><a href="/#contact">Contato</a></h1></br>
+        </li>
+      </ul>
+    </div>
+    <div>
+    </div>
+
+    <div>
+      <span>"Quotation Marks" por Eakarius da coleção <a href="http://thenounproject.com/">The Noun Project</a>.</span>
+    </div>
+
+    <div>
+        <p>Desenvolvido por Paulo Moreno - Design por Pedro Moreno</p>
+        <p><a class="nav_item" href="/">Português (Brasil)</a> | <a href="/en/">English</a></span></p>
+    </div>
+
+  </footer>
+
+</body>
+</html>

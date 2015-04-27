@@ -1,0 +1,70 @@
+<!DOCTYPE html>{% extends "layout.html" %}
+{% load static %}
+
+{% block css %}
+
+  <link rel="stylesheet" type="text/css" href="{% static "css/bandejao.css" %}">
+{% endblock %}
+
+{% block javascript %}
+<script src='//cdn.goroost.com/roostjs/orlbbgkudkv3wu6l1gjje6u79tpdof86' async></script>
+{% endblock %}
+
+{% block title %} - Bandejão{% endblock %}
+
+{% block content %}
+  <section class="feature_top">
+  	<div class="b_right b_text_width_hack_because_html_is_stupid">
+	    <h1 class="b_heading">Bandejão</h1></br></br>
+	    <p>Um novo jeito de consultar o cardápio do Restaurante Universitário da USP de São Carlos.</p>
+	    <p><a href="https://itunes.apple.com/br/app/bandejao-usp-sao-carlos/id719690233?ls=1&mt=8"><img  class="badge" src="{% static "img/Download_on_the_App_Store_Badge_PTBR_135x40.svg" %}" alt="app store badge"></a></p>
+	</div>
+    <div class="b_left">
+    	<img class="b_img" src="{% static "img/bandejao/screen0.png" %}" alt="tela principal">
+    </div>
+
+    </div>
+  </section>
+
+  <div class="btm_l1"></div>
+  <div class="btm_l2"></div>
+
+  <section class="m_btm">
+
+	<section class="feature">
+		<div class="feature_ctr">
+	        <div class="b_left b_text_width_hack_because_html_is_stupid">
+		        <h1 class="b_heading">Dias da Semana</h1><br/><br/>
+		        <p class="b_text">Com uma interface simples e intuitiva, é possível consultar a próxima refeição ou consultar todas as refeições da semana.</p>
+		    </div>
+		    <div class="b_right">
+	    		<img class="b_img" src="{% static "img/bandejao//screen1.png" %}" alt="tela do dia">
+	    	</div>
+	    </div>
+    </section>
+
+    <section class="feature">
+    	<div class="feature_ctr">
+	    	<div class="b_left"><img class="b_img" src="{% static "img/bandejao/screen2.png" %}" alt="tela busca por pratos"></div>
+	        <div class="b_right b_text_width_hack_because_html_is_stupid">
+		        <h1 class="b_heading">Busca por Pratos<h1><br/><br/>
+		        <p class="b_text">Também é possível realizar buscas por pratos. Para isto, basta clicar no texto de qualquer refeição e, sem sair do aplicativo, é possível visualizar imagens através de uma busca no Google.</p>
+	      	</div>
+      	</h1>
+    </section>
+
+    <section class="feature">
+      	<div class="feature_ctr">        
+	        <div class="b_left b_text_width_hack_because_html_is_stupid">
+        		<h1 class="b_heading">Notificações</h1><br/><br/>
+        		<p class="b_text">Quer receber notificações? Basta ativar um botão e uma notificação com a descrição da refeição será exibida 1 hora antes do inicio de cada refeição.</p>
+      		</div>
+     		<div class="b_right">
+    			<img class="b_img" src="{% static "img/bandejao//screen3.png" %}" alt="tela de notificações">
+    		</div>
+      	</div>
+    </section>
+
+  </section>
+
+{% endblock %}

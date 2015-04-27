@@ -1,0 +1,120 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block css%}
+  <link rel="stylesheet" type="text/css" href="{% static "css/projects_style.css" %}">
+  <link rel="stylesheet" type="text/css" href="{% static "css/contact_style.css" %}">
+{% endblock %}
+
+
+{% block content%}
+
+  <section class="center_ctr">
+    <div class="center">
+      <img class="center_img" src="{% static "img/me.jpg" %}" alt="paulo moreno">
+      <span class="center_text_big">Paulo Moreno<br/></span>
+      <span class="center_text_small"><br/>Estudante em Ciências da Computação.<br/>
+      Apaixonado por tecnologia e por novas idéias.<br/></span>
+    </div>
+  </section>
+
+  <div class="btm_l1"></div>
+  <div class="btm_l2"></div>
+
+  <section class="m_btm">
+    <div class="m_btm_ctr">
+      <div class="m_btm_left">
+        <span class="quote">
+          <p>
+			<quote class="quote">
+	          <img class="quote_ii" src="{% static "img/icon_19279.png" %}" alt="quote"><br/>
+	          Inspirado por desafios, focado e perfeccionista.
+	          São algumas palavras que podem descrever o meu método de trabalho.
+	          <br/>
+	          <img class="quote_ii" src="{% static "img/icon_19279.png" %}" alt="quote"><br/>
+          	</quote>
+          </p>
+        </span>
+      </div>
+      <div class="m_btm_right">
+        <p>
+          <span class="m_subtitle">Área de Atuação</span><br/><br/>
+          <span class="m_text">
+          Atualmente trabalho com desenvolvimento Web.<br/>
+          Também tenho conhecimento em desenvolvimento para iOS e Visão Computacional para navegação autônoma.
+          </span>
+          <br/>
+          <span> 
+      </div>
+    </div>
+  </section>
+
+
+  <section class="projects" id="projects">
+    <div class="p_ctr">
+      <div class="p_title_box">
+        <div class="p_title">PROJETOS</div>
+      </div>
+
+    <a href="/bandejao/">
+	  <div class="p_item">
+		<img src="{% static "img/bandejao_icon.png" %}" alt="bandejão icon" class="img_bandejao">
+	    <div class="p_item_title">Bandejão</div>
+	    <p class="p_item_text">Aplicativo para consulta do cardápio do restaurante universitário da USP de São Carlos.</p>
+	  </div>
+	  </a>
+
+      <a href="http://blubel.me">
+    <div class="p_item">
+    <img src="{% static "img/blubel_icon.png" %}" alt="blubel icon" class="img_bandejao">
+      <div class="p_item_title">Blubel</div>
+      <p class="p_item_text">Um assistente pessoal para todos os serviços de beleza.</p>
+    </div>
+    </a>
+
+    <a href="http://compareapp.businesscatalyst.com">
+    <div class="p_item">
+    <img src="{% static "img/compare_icon.png" %}" alt="bandejão icon" class="img_bandejao">
+      <div class="p_item_title">Compare</div>
+      <p class="p_item_text">Compare medidas e valores, usando regra de 3.</p>
+    </div>
+    </a>
+
+    <a href="/das/">
+    <div class="p_item">
+    <img src="{% static "img/das_icon.png" %}" alt="das icon" class="img_bandejao">
+      <div class="p_item_title">DAS</div>
+      <p class="p_item_text">Sistema para gerenciamento de consultas médicas e filas.</p>
+    </div>
+    </a>
+
+	  <a href="/kinnav/">
+	  <div class="p_item">
+	    <img src="{% static "img/kinnav_logo.png" %}" alt="kinnav icon" class="img_kinnav">
+	    <div class="p_item_title">KinNav</div>
+	    <p class="p_item_text">Projeto de Navegação Autonoma e Detecção de Intrusos com o uso do sensor Kinect.</p>
+	  </div>
+	  </a>
+
+	</div>
+  </section>
+
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2 class="c_title">Contato</h2>
+    <div class="c_ctr">
+      <img class="c_img" src="{% static "img/me.jpg" %}" alt="paulo moreno">
+      <p class="c_name">Paulo Moreno</p>
+      <p><a class="c_subtitle" href="mailto:pmoreno@usp.br">pmoreno@usp.br</a></p>
+	 </div>
+   <div class="c_ctr social">
+      <a href="https://facebook.com/paulo.moreno.102"><img src="{% static "img/social/facebook_icon@2x.png" %}" alt="facebook"></a>
+      <a href="https://twitter.com/phmods"><img src="{% static "img/social/twitter_icon@2x.png" %}" alt="twitter"></a>
+      <a href="https://plus.google.com/u/0/118035164106813388207/"><img src="{% static "img/social/googleplus_icon@2x.png" %}" alt="google_plus"></a>
+      <a href="https://instagram.com/paulomoreno/"><img src="{% static "img/social/instagram_icon@2x.png" %}" alt="instagram"></a>
+   </div>
+  </section>
+  
+{% endblock %}

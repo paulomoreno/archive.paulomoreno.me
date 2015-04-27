@@ -1,0 +1,339 @@
+@charset "UTF-8";
+
+body{
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('/static/img/das/bkg-img.jpg');
+/*	background-image: url("img/bkg-img.jpg");*/
+}
+
+div[class ^="col"]{
+	float: left;
+	text-align: center;
+}
+
+div[class ^="col"] p{
+	font-size: 18px;
+}
+
+.col-md-3{
+	width: 24%;
+}
+
+.col-md-3:first-child{
+	margin-right: 2%;
+}
+
+.col-md-2{
+	width: 15%;
+}
+
+.col-md-1{
+	width: 10%;
+}
+
+.cf_center{
+	width: 84%;
+	margin-left: 8%;
+}
+
+.clear{
+	height: 30px;
+	width: 100%;
+	clear: both;
+}
+
+
+.btm_l2{
+	box-shadow: 0 0 0 white;
+}
+
+.mais{
+	font-size: 45pt;
+	font-weight: 700;
+	vertical-align: middle;
+}
+
+.seta{
+		vertical-align: middle;
+		margin-top: 50px;
+}
+
+.quadrado{
+	margin-top: 60px;
+	height: 200px;
+}
+
+.q_l1{
+	width: 100%;
+	height: 120px;
+}
+
+
+.feature_top{
+	width: 65%;
+	height: 655px;
+
+	max-width: 1680px;
+	min-width: 750px;
+
+	margin: auto;
+	margin-top: 40px;
+	margin-bottom: 4%; 
+
+	color: white;
+	font-weight: 400;
+	text-shadow: 0 0 1px #dddddd;
+
+	overflow: hidden;
+
+	text-align: center;
+}
+
+.feature{
+	width: 100%;
+	min-height: 500px;
+
+	color: black;
+	font-weight: 400;
+	text-shadow: 0 0 1px #777777;
+}
+
+.feature h1{
+	font-size: 28pt;
+}
+
+.feature p{
+	font-size: 14pt;
+}
+
+.feature_top img{
+	width: 128px;
+	height: 128px;
+
+	vertical-align: top;
+}
+
+.feature_top .img span{
+	line-height: 128px;
+	font-size: 72pt;
+}
+
+.feature_top a{
+	font-size: 18pt;
+	font-weight: 600;
+	padding: 5px;
+	padding-left: 15px;
+	padding-right: 15px;
+	text-decoration: none;
+	color: white;
+	border: solid 2px white;
+}
+
+.feature_top .btn{
+	margin-top: 80px;
+}
+
+.feature_top a:hover{
+	text-decoration: none;
+	color: #0095d5;
+	border: solid 2px #0095d5;
+}
+
+.feature_top p{
+	max-width: 300px;
+
+	margin: auto;
+	margin-top: 20px;
+	font-size: 16pt;
+	padding: 3%;
+	background-color: rgba(11,82,142,0.69);
+	font-weight: 300;
+}
+
+.feature_top p:nth-of-type(1){
+	max-width: 500px;
+
+	margin-top: 50px;
+
+	background-color: rgba(0,136,192,0.69);
+}
+
+.btm_l1{
+	margin-top: -4%;
+}
+
+.feature h1{
+	color: #0095d5;
+	font-weight: 400;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.feature ul{
+	margin-left: 0px;
+}
+
+.feature ul li{
+	list-style: none;
+}
+
+.feature ul li a{
+	text-decoration: none;
+	color: #0095d5;
+}
+
+.feature ul li a:hover{
+	text-decoration: none;
+	color: #20B5F5;
+}
+
+.feature .linha{
+	height: 1px;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5px;
+	border-top: solid 1px  rgba(0, 149, 213, 0.25);
+}
+
+.feature .linha.hr2{
+	width: 6%;
+	margin-top: 5px;
+}
+
+.feature.first{
+	background-color: red;
+	padding-top: 40px;
+	margin-top: -30px;
+
+	padding-bottom: 100px;
+
+	min-height: 400px;
+}
+
+.feature:nth-child(even) {
+	background: #eeeeee;
+	box-shadow: 0 0 2pt #777777;
+}
+
+.feature:nth-child(odd) {
+	background: white;
+}
+
+h1.mrg{
+	padding-top: 2%;
+}
+
+.tu_row{
+	text-align: center;
+	width: 70%;
+	margin: auto;
+	min-height:50px; 
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+.tu_left{
+	margin-left: 4%;
+	width: 48%;
+	float: left;
+}
+
+.tu_left:first-child{
+	margin-left: 0%;
+}
+
+.tu_p{
+	width: 60%;
+	margin: auto;
+}
+
+.tu_clear{
+	clear: both;
+}
+
+.ghicon{
+	width: 200px;
+	height: 82px;
+}
+
+.feature.last{
+	margin-top:-10px;
+	padding-top: 20px;
+}
+
+.membro{
+	float: left;
+	width: 150px;
+	margin-left: 6%;
+	margin-right: 6%;
+	margin-bottom: 20px; 
+}
+
+.membro img{
+	height: 64px;
+	width: 64px;
+	border-radius: 100%;
+	border: 2px solid rgba(255,255,255,0.8);
+}
+
+@media screen and (min-width: 1500px){
+
+	.d_azul{
+		margin-top: 18%;
+	}
+
+	.d_branco{
+		margin-top: 18%;
+	}
+
+
+}
+
+@media screen and (max-width: 680px){
+
+	.d_azul{
+		margin-top: 2%;
+		width: 90%;
+	}
+
+	.d_azul h1{
+		font-size: 16pt;
+	}
+
+	.d_azul h2{
+		font-size: 14pt;
+	}
+
+}
+
+
+@media screen and (max-width: 880px){
+
+	.cf_center{
+		width: 98%;
+		margin-left: 1%;
+	}
+}
+
+@media screen and (max-width: 580px){
+	.col-md-3{
+		width:100%;
+	}
+
+	.col-md-3:first-child{
+		margin-right: 0%;
+	}
+
+	.col-md-2{
+		width: 100%;
+	}
+
+	.col-md-1{
+		width: 100%;
+	}
+
+	.cf_center{
+		width: 100%;
+		margin-left: 0%;
+	}
+}

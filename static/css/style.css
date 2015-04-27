@@ -1,0 +1,279 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body{
+	background-image: url("/static/img/bkg_small.jpg");
+	background-attachment: fixed;
+	overflow-x:hidden;
+}
+
+*{
+	margin:0;
+	padding:0;
+	font-family:'Source Sans Pro', Helvetica Neue Light, Helvetica Neue, Helvetica, Arial, sans-serif;
+	font-weight: 300;
+}
+
+header{
+	background-color: white;
+	width: 100%;
+	height: 100px;
+	box-shadow: 0 0 2pt #777777;
+}
+
+.h_center{
+	width: 60%;
+	min-width: 550px;
+	max-width: 1680px;
+	height: 100%;
+	margin: auto;
+}
+
+.logo{
+	height: 100%;
+	float:left;
+	font-size: 34pt;
+}
+
+.logo::first-letter{
+	/*color: #4CC417;*/
+	color: #0095d5;
+	font-size: 60pt;	
+}
+
+.logo_p{	
+
+}
+
+nav {
+}
+
+nav a{
+	position: relative;
+	margin-top: 40px;
+	float: right;
+	padding: 1%;
+	padding-right: 5%;
+	padding-left: 5%;
+
+	text-decoration: none;
+	list-style: none;
+
+	color: #555555;
+	font-size: 14pt;
+	text-decoration: none;
+
+	-webkit-transition: All 0.2s ease;
+	-moz-transition: All 0.2s ease;
+	-o-transition: All 0.2s ease;
+	-ms-transition: All 0.2s ease;
+	transition: All 0.2s ease;
+}
+
+nav a:hover{	
+	top:2px;
+	color: #0095d5;
+	text-decoration: none;
+
+	font-size: 14pt;
+}
+
+.btm_l1{
+	margin-top: 8%;
+
+	height: 40px;
+	width: 100%;
+
+	background-color: rgba(255,255,255, 0.6);
+
+	-webkit-transform: rotate(0.3deg);
+    -moz-transform: rotate(0.3deg);
+    -o-transform: rotate(0.3deg);
+    -ms-transform: rotate(0.3deg);
+    transform: rotate(0.3deg);
+}
+
+.btm_l2{
+	margin-top: -20px;
+	height: 50px;
+	width: 100%;
+
+	background-color: white;
+
+	-webkit-transform: rotate(1deg);
+    -moz-transform: rotate(1deg);
+    -o-transform: rotate(1deg);
+    -ms-transform: rotate(1deg);
+    transform: rotate(1deg);
+
+    box-shadow: 0 0 2px #aaaaaa;
+}
+
+.btm_l3{
+	width: 100%;
+	height: 50px;
+
+	background-color: #4cc417;
+}
+
+.btm_l4{
+	width: 100%;
+	height: 50px;
+
+	background-color: white;
+}
+
+.m_btm{
+	margin-top: -30px;
+
+	height: 400px;
+	width: 100%;
+
+	background-color: #dfdfdf;
+
+	overflow: auto;
+}
+
+.projects{
+	background-image: url("/static/img/concrete_wall.png");	
+	width: 80%;
+	height: auto;
+	overflow: auto;
+
+	box-shadow: inset 0 0 10pt #000000;
+	box-shadow: 0 0 10pt #555555;
+
+	padding: 10%;
+	padding-top: 0;
+	padding-bottom: 3%;
+
+	text-align: center;
+}
+
+.contact{
+	width: 80%;
+	height: auto;
+	overflow: auto;
+
+	background-color: #dfdfdf;
+
+	padding: 10%;	
+	padding-top: 3%;
+	padding-bottom: 3%;
+
+	text-align: center;
+}
+
+.c_title{
+	font-size: 38pt;
+	color: #525252;
+	font-weight: 400;
+}
+
+.ftr_l1{
+	height: 50px;
+	width: 100%;
+	margin-top: -50px;
+
+	background-color: #dfdfdf;
+
+	-webkit-transform: rotate(1deg);
+    -moz-transform: rotate(1deg);
+    -o-transform: rotate(1deg);
+    -ms-transform: rotate(1deg);
+    transform: rotate(1deg);
+}
+
+.ftr_l2{
+	margin-top: -20px;
+	height: 40px;
+	width: 100%;
+
+	background-color: rgba(223,223,223, 0.4);
+
+    -webkit-transform: rotate(0.3deg);
+    -moz-transform: rotate(0.3deg);
+    -o-transform: rotate(0.3deg);
+    -ms-transform: rotate(0.3deg);
+    transform: rotate(0.3deg);
+}
+  
+
+footer{
+	width: 100%;
+	height: auto;
+	margin-top: -30px;
+
+background: rgb(0,165,211); /* Old browsers */
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwYTVkMyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDVmZDMiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+background: -moz-linear-gradient(top,  rgba(0,165,211,1) 0%, rgba(0,95,211,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,165,211,1)), color-stop(100%,rgba(0,95,211,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(0,165,211,1) 0%,rgba(0,95,211,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(0,165,211,1) 0%,rgba(0,95,211,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(0,165,211,1) 0%,rgba(0,95,211,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(0,165,211,1) 0%,rgba(0,95,211,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00a5d3', endColorstr='#005fd3',GradientType=0 ); /* IE6-8 */
+
+/*
+	background: -moz-linear-gradient(top,  #4cc417 0%, #119600 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4cc417), color-stop(100%,#119600)); 
+	background: -webkit-linear-gradient(top,  #4cc417 0%,#119600 100%); 
+	background: -o-linear-gradient(top,  #4cc417 0%,#119600 100%);
+	background: -ms-linear-gradient(top,  #4cc417 0%,#119600 100%); 
+	background: linear-gradient(to bottom,  #4cc417 0%,#119600 100%); 
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4cc417', endColorstr='#119600',GradientType=0 );
+*/
+}
+
+@media screen and (min-device-width: 2048px) and (max-device-width: 3071px){
+	/* Uses a larger background for big devices */
+ 	body{
+	  	background-image: url("/static/img/bkg_medium.jpg");
+
+	}
+
+}
+
+@media screen and (min-device-width: 2048px){
+
+	.btm_l1{
+		-webkit-transform: rotate(0.2deg);
+	    -moz-transform: rotate(0.2deg);
+	    -o-transform: rotate(0.2deg);
+	    -ms-transform: rotate(0.2deg);
+	    transform: rotate(0.2deg);
+	}
+
+	.btm_l2{
+		-webkit-transform: rotate(0.5deg);
+	    -moz-transform: rotate(0.5deg);
+	    -o-transform: rotate(0.5deg);
+	    -ms-transform: rotate(0.5deg);
+	    transform: rotate(0.5deg);
+	}
+
+	.ftr_l1{
+		-webkit-transform: rotate(0.5deg);
+	    -moz-transform: rotate(0.5deg);
+	    -o-transform: rotate(0.5deg);
+	    -ms-transform: rotate(0.5deg);
+	    transform: rotate(0.5deg);
+	}
+
+	.ftr_l2{
+	    -webkit-transform: rotate(0.2deg);
+	    -moz-transform: rotate(0.2deg);
+	    -o-transform: rotate(0.2deg);
+	    -ms-transform: rotate(0.2deg);
+	    transform: rotate(0.2deg);
+	}
+
+}
+
+@media screen and (min-device-width: 3072px){
+	/* Uses a larger background for big devices */
+ 	body{
+	  	background-image: url("/static/img/bkg_big.jpg");
+	}
+}

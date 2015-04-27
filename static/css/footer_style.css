@@ -1,0 +1,112 @@
+@charset "UTF-8";
+
+footer div{
+	width: 80%;
+	min-width: 500px;
+	height: auto;
+	margin: auto;
+	margin-top: 60px;
+
+	text-align: center;
+
+	overflow: auto;
+}
+
+footer div:nth-child(1){
+	padding-top: 80px;
+	margin-top: 0;
+}
+
+footer div:last-child{
+	width: 100%;
+	height: 20px;
+	padding: 5px 0px 5px 0px;
+
+	background-color: rgba(0,0,0,0.2);
+	font-size:11pt;
+	color: #eeeeee;
+}
+
+footer div:last-child p{
+	line-height: 20px;
+}
+
+
+footer div:last-child p:first-child{
+	margin-left: 10%;
+	float: left;
+}
+
+footer div:last-child p:last-child{
+	margin-right: 10%;
+	float:right;
+}
+
+footer div:last-child a{
+	text-decoration: none;
+	color:#ccccff;
+}
+
+footer div:last-child a:hover{
+	color:#aaaadd;
+}
+
+footer div li{
+	width: 150px;
+	list-style: none;
+	float: left;
+}
+
+footer div li:nth-child(2){
+	border-left: 1px dashed rgba(255,255,255,0.2);
+	border-right: 1px dashed rgba(255,255,255,0.2);
+
+	padding: 0px 24px 0px 24px;
+}
+
+.site_map{
+	width: 500px;
+	height: 100%;
+	margin: auto;
+	overflow: auto;
+}
+
+footer h1{
+	font-size: 16pt;
+	color: black;
+}
+
+
+footer li h1 a{
+	text-decoration: none;
+	font-size: 16pt;
+	color: black;
+}
+
+footer li h1 a:hover{
+	color: #333333;
+}
+
+footer li a{
+	font-size:  12pt;
+	text-decoration: none;
+	color: #333333;
+}
+
+footer li a:hover{
+	color: #555555;
+}
+
+footer span{
+	font-size: 10pt;
+}
+
+footer span a{
+	font-size:  10pt;
+	text-decoration: none;
+	color: #333333;
+}
+
+footer span a:hover{
+	color: #555555;
+}

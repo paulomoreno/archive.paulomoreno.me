@@ -1,0 +1,81 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block css %}
+  <link rel="stylesheet" type="text/css" href="{% static "css/kinnav.css" %}"> 
+{% endblock %}
+
+{% block title %} - KINNAV{% endblock %}
+
+{% block content %}
+  <section class="feature_top">
+    <div class="img"><span><img src="{% static "img/kinnav_logo.png" %}" alt="kinnav logo">KINNAV</span></div>
+    <p>Sistema de navegação autônoma e detecção de intrusos</p>
+    </div>
+  </section>
+
+  <div class="btm_l1"></div>
+  <div class="btm_l2"></div>
+
+  <div class="m_btm">
+
+  <section class="feature">
+    
+    <h1>O Projeto</h1>
+    <div class="linha"></div>
+    <div class="linha hr2"></div>
+
+    <div class="m_ctr">
+      <p>O KinNav é um sistema de Navegação Autônoma e de Detecção de Intrusos que utiliza o sensor Kinect.<p>
+      <img class="fig6" src="{% static "img/kinnav/fig6.png" %}" alt="kinnav em execução">
+      <p>Com ele, um robô vigilante pode patrulhar um abiente de modo autônomo, isto é, sem a necessidade de um supervisor humano e detectar a presença de intrusos.</p>
+    </div>
+
+
+  </section>
+
+  <section class="feature">
+    
+    <h1>Ferramentas Utilizadas</h1>
+    <div class="linha"></div>
+    <div class="linha hr2"></div>
+
+    <div class="m_ctr">
+      <p>O KinNav utiliza-se da biblioteca de visão computacional OpenCV e do sensor Kinect (sensor da Microsoft utilizado pelo Xbox).</p>
+
+      <div class="fu">      
+        <a href="http://opencv.org"><img class="ocv_icn" src="{% static "img/kinnav/open_cv.png" %}" alt="opencv logo"></a>
+        <a href="http://www.microsoft.com/en-us/kinectforwindows/meetkinect/default.aspx">Kinect</a>
+      </div>
+
+    </div>
+
+
+  </section>
+
+
+  <section class="feature">
+    <h1>Apoio</h1>
+    <div class="linha"></div>
+    <div class="linha hr2"></div>
+
+    <div class="m_ctr">
+
+    <ul>
+      <li>Laboratório de Robótica Móvel - LRM / ICMC / USP</li>
+      <li>USP Pró-Reitoria de Pesquisa – Programa PIBIC / CNPq</li>
+      <li>Instituto Nacional de C&T em Sist. Embarcados Críticos INCT-SEC</li>
+      <li>Centro de Robótica da USP de São Carlos - CRob/SC-USP</li>
+    </ul>
+
+
+    <a class="img_sm" style="background-image:url({% static "img/kinnav/lrm.png" %}); width:80px; height:30px;"></a>
+    <a class="img_sm" style="background-image:url({% static "img/kinnav/cnpq.png" %}); width:94px; height:30px;"></a>
+    <a class="img_sm" style="background-image:url({% static "img/kinnav/inct-sec.png" %}); width:270px; height:30px;"></a>
+    <a class="img_sm" style="background-image:url({% static "img/kinnav/crob.png" %}); width:103px; height:30px;"></a>
+ 
+    </div>
+
+  </section>
+
+{% endblock %}
