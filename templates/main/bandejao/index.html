@@ -15,11 +15,22 @@
 
 {% block content %}
 
+	<div class="row scrollspy white-opacity grey-text center-align" id="proxima">
+		<br/>
+		<h3><div class="rotate"><i class="mdi-action-settings"></i></div> Em construção</h3>
+		<br/>
+	</div>
+
+	<br/>
+	<br/>
+	<br/>
 
 	<div class="row scrollspy white-opacity" id="proxima">
 		<br/>
 		<div class="container">
-			<h4 class="grey-text"><img src="{% static "img/bandejao/sun@3x.png" %}" width="30" alt=""> Próxima Refeição<span id="pro-data"></span></h4>
+			<h4 class="grey-text"><small>Próxima Refeição:</small><span class="right" id="pro-data"></span></h4>
+			<h4 class="bandejao-red-text"><img src="{% static "img/bandejao/sun@3x.png" %}" width="30" alt=""> <span id="pro-p"></h4>
+
 	  		<div class="divider"></div>
 			{% include "main/bandejao/refeicao.html" with short="pro"  periodo=""%}
 			<div class="divider"></div>
@@ -28,13 +39,8 @@
 		<br/>
 	</div>
 
-
     	<br/>
     	<br/>
-
-    	<br/>
-    	<br/>
-
 
   <div class="row scrollspy" id="dias">
     <div class="col s12 white">
@@ -96,5 +102,24 @@
     	<br/>
     	<br/>
     	<br/>
+
+
+  <!-- Modal Structure -->
+  <div id="modal_load" class="modal">
+    <div class="modal-content">
+      <h4>Carregando informações...</h4>
+      <div class="preloader-wrapper small active">
+	    <div class="spinner-layer spinner-red-only center-align">
+	      <div class="circle-clipper left">
+	        <div class="circle"></div>
+	      </div><div class="gap-patch">
+	        <div class="circle"></div>
+	      </div><div class="circle-clipper right">
+	        <div class="circle"></div>
+	      </div>
+	    </div>
+	  </div>
+    </div>
+  </div>
 
 {% endblock %}
