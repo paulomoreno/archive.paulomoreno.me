@@ -1,6 +1,23 @@
 @charset "UTF-8";
 /* CSS Document */
 
+body{
+}
+
+section{
+	background-image: url(/static/img/bandejao/bkg.jpg);
+	padding-top: 100px;
+}
+
+.white-opacity{
+	background-color: rgba(255,255,255,0.9);
+}
+
+.mypad{
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
 .row {
     margin-bottom: 0;
 }

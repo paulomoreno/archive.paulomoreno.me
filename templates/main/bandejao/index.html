@@ -2,6 +2,7 @@
 {% load static %}
 
 {% block css %}
+<link href='http://fonts.googleapis.com/css?family=Merienda+One' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="{% static "css/bandejao.css" %}">
 {% endblock %}
 
@@ -14,74 +15,87 @@
 
 {% block content %}
 
-    <img class="responsive-img" src="{% static "img/bandejao/bkg_1.jpg" %}"></div>
 
-	<div class="row container scrollspy center-align" id="proxima">
+	<div class="row scrollspy white-opacity" id="proxima">
 		<br/>
-  		<h4 class="grey-text"><i class="mdi-action-settings"></i>  Em Construção</h4>
-		<br/>
-	</div>
-
-
-	<img class="responsive-img" src="{% static "img/bandejao/bkg_2.jpg" %}">
-
-
-	<div class="row container scrollspy" id="proxima">
-		<h4 class="grey-text"><img src="{% static "img/bandejao/sun@3x.png" %}" width="30" alt=""> Próxima Refeição<span id="pro-data"></span></h4>
-  		<div class="divider"></div>
-		{% include "main/bandejao/refeicao.html" with short="pro"  periodo=""%}
-		<div class="divider"></div>
+		<div class="container">
+			<h4 class="grey-text"><img src="{% static "img/bandejao/sun@3x.png" %}" width="30" alt=""> Próxima Refeição<span id="pro-data"></span></h4>
+	  		<div class="divider"></div>
+			{% include "main/bandejao/refeicao.html" with short="pro"  periodo=""%}
+			<div class="divider"></div>
+			<br/>
+		</div>
 		<br/>
 	</div>
 
-	<img class="responsive-img" src="{% static "img/bandejao/bkg_3.jpg" %}">
+
+    	<br/>
+    	<br/>
+
+    	<br/>
+    	<br/>
 
 
-	<div class="row container scrollspy" id="segunda">
+  <div class="row scrollspy" id="dias">
+    <div class="col s12 white">
+      <ul class="tabs">
+        <li class="tab col s3"><a class="active" href="#segunda">Segunda</a></li>
+        <li class="tab col s3"><a href="#terca">Terça</a></li>
+        <li class="tab col s3"><a href="#quarta">Quarta</a></li>
+        <li class="tab col s3"><a href="#quinta">Quinta</a></li>
+        <li class="tab col s3"><a href="#sexta">Sexta</a></li>
+        <li class="tab col s3"><a href="#sabado">Sábado</a></li>
+      </ul>
+    </div>
+
+    <div id="segunda" class="col s12 white-opacity">
+    	<div class="container">
+		<br/>
 		{% include "main/bandejao/dia.html" with short="seg"  nome="Segunda-Feira"%}
-	</div>
-
-	<img class="responsive-img" src="{% static "img/bandejao/bkg_1.jpg" %}">
-
-
-	<div class="row container scrollspy" id="terca">
-		{% include "main/bandejao/dia.html" with short="ter"  nome="Terça-Feira"%}
-	</div>
-
-	<img class="responsive-img" src="{% static "img/bandejao/bkg_2.jpg" %}">
-
-
-	<div class="row container scrollspy" id="quarta">
-		{% include "main/bandejao/dia.html" with short="qua"  nome="Quarta-Feira"%}
-	</div>
-
-	<img class="responsive-img" src="{% static "img/bandejao/bkg_3.jpg" %}">
-
-
-	<div class="row container scrollspy" id="quinta">
-		{% include "main/bandejao/dia.html" with short="qui"  nome="Quinta-Feira"%}
-	</div>
-
-
-	<img class="responsive-img" src="{% static "img/bandejao/bkg_1.jpg" %}">
-
-
-	<div class="row container scrollspy" id="sexta">
-		{% include "main/bandejao/dia.html" with short="seg"  nome="Sexta-Feira"%}
-	</div>
-
-	<img class="responsive-img" src="{% static "img/bandejao/bkg_2.jpg" %}">
-
-	<div class="row container scrollspy" id="sabado">
-		<h4 class="grey-text">Sábado - <span id="pro-data">dd/mm/aaaa</span></h4>
-		<h4 class="grey-text"><img src="{% static "img/bandejao/sun@3x.png" %}" width="30" alt=""> Almoço</h4>
-
-  		<div class="divider"></div>
-		{% include "main/bandejao/refeicao.html" with short="sab"  periodo="-a"%}
-		<div class="divider"></div>
 		<br/>
-	</div>
+		</div>
+    </div>
+    <div id="terca" class="col s12 white-opacity ">
+    	<div class="container">
+    	<br/>
+		{% include "main/bandejao/dia.html" with short="ter"  nome="Terça-Feira"%}
+    	<br/>
+		</div>
+    </div>
+    <div id="quarta" class="col s12 white-opacity">
+    	<div class="container">
+    	<br/>
+    	<br/>
+		{% include "main/bandejao/dia.html" with short="qua"  nome="Quarta-Feira"%}
+		<br/>
+		</div>
+    </div>
+    <div id="quinta"class="col s12 white-opacity">
+    	<div class="container">	
+    	<br/>	
+    	{% include "main/bandejao/dia.html" with short="qui"  nome="Quinta-Feira"%}
+    	<br/>
+    	</div>
+    </div>
+    <div id="sexta" class="col s12 white-opacity">
+    	<div class="container">
+    	<br/>
+		{% include "main/bandejao/dia.html" with short="sex"  nome="Sexta-Feira"%}
+		<br/>
+		</div>
+    </div>
+    <div id="sabado" class="col s12 white-opacity">
+    	<div class="container">
+    	<br/>
+		{% include "main/bandejao/dia.html" with short="sab"  nome="Sábado"%}
+		<br/>
+		</div>
+    </div>
+  </div>
 
-	<img class="responsive-img" src="{% static "img/bandejao/bkg_3.jpg" %}">
+    	<br/>
+    	<br/>
+    	<br/>
+    	<br/>
 
 {% endblock %}

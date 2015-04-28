@@ -1,6 +1,7 @@
 $(document).ready(function(){
 	$(".button-collapse").sideNav();
     //$('.parallax').parallax();
+    $('ul.tabs').tabs();
     $('.scrollspy').scrollSpy();
     $('.pushpin').pushpin({ top: $('header').height() });
     $('.pushpin').bind('cssClassChanged',function(){
@@ -10,10 +11,31 @@ $(document).ready(function(){
     		$('body').css('margin-top',0);
     	}
     });
+
+
+
+    $('.btn_pro').click(function(){
+        $('ul.tabs').tabs('select_tab', 'proxima');
+    });
+    $('.btn_seg').click(function(){
+        $('ul.tabs').tabs('select_tab', 'segunda');
+    });
+    $('.btn_ter').click(function(){
+        $('ul.tabs').tabs('select_tab', 'terca');
+    });
+    $('.btn_qua').click(function(){
+        $('ul.tabs').tabs('select_tab', 'quarta');
+    });
+    $('.btn_qui').click(function(){
+        $('ul.tabs').tabs('select_tab', 'quinta');
+    });
+    $('.btn_sex').click(function(){
+        $('ul.tabs').tabs('select_tab', 'sexta');
+    });
+    $('.btn_sab').click(function(){
+        $('ul.tabs').tabs('select_tab', 'sabado');
+    });
 });
-
-
-if ($('nav.pushpin.pinned').length){console.log('a')}else{console.log('b')}
 
 
 // Fix from http://stackoverflow.com/questions/1950038/jquery-fire-event-if-css-class-changed
