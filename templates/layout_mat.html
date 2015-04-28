@@ -1,9 +1,11 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
     <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/css/materialize.min.css">
     {% block css %}{% endblock %}
 
     <meta charset="UTF-8" />
@@ -20,32 +22,14 @@
             <div class="container">
                 <div class="row">
                     <div class="col s12">
-                        <img class="left mylogo" src="media/trank_logo.png" height="126" alt="logo">
-                        <div class="left white-text flow-text">
-                        </div>
-                        <div id="login_cadastro" class="hide-on-med-and-down right">
-                            <a class="waves-effect waves-light btn deep-purple" href="login.html">Login</a>
-                            <a class="waves-effect waves-light btn deep-purple" href="cadastro.html">Cadastro</a>
-                        </div>
+                        <img class="left mylogo hide-on-small-only" src="{% static "img/bandejao_icon.png" %}" height="116" alt="logo">
+                        <img class="left mylogo hide-on-med-and-up" src="{% static "img/bandejao_icon.png" %}" height="56" alt="logo">
+                        <br/>
+                        <h4 class="left white-text hide-on-small-only"> O que tem no Bandejão Hoje?</h4>
+                        <h5 class="left white-text hide-on-med-and-up"> O que tem no Bandejão Hoje?</h5>
                     </div>
-
                 </div>
                 <div class="row">
-                    <div class="left white-text flow-text col s9">
-                        <p>Viagem tranquila é viagem com Trank.</p>
-                    </div>
-
-                    <div class="col s3">
-                        <form>
-                            <div class="input-field">
-                                <input id="search" type="search" required>
-                                <label for="search"><i class="mdi-action-search"></i>
-                                </label>
-                                <i class="mdi-navigation-close"></i>
-                            </div>
-                        </form>
-                    </div>
-
 
                 </div>
 
@@ -54,39 +38,46 @@
     </header>
 
     <!-- Nav bar -->
-    <nav class="my-dark-purple my_shadow">
+    <nav class="bandejao-red my_shadow pushpin row">
         <div class="container">
             <div class="nav-wrapper">
                 <!-- Navbar logo -->
                 <!-- Collapse button -->
                 <a href="#" data-activates="collapsednavbar" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
                 <!-- Navbar links -->
-                <ul class="hide-on-med-and-down ">
-                    <li><a href="index.html">Início</a>
+                <ul class="hide-on-small-only"> 
+                    <li><a href="#proxima">Próxima Refeição</a>
+                    </li>  
+                    <li><a href="#segunda">Segunda</a>
+                    </li>               
+                    <li><a href="#terca">Terça</a>
                     </li>                    
-                    <li><a href="categoria.html?cat=america">América</a>
-                    </li>
-                    <li><a href="categoria.html?cat=asia">Ásia</a>
-                    </li>
-                    <li><a href="categoria.html?cat=europa">Europa</a>
-                    </li>
+                    <li><a href="#quarta">Quarta</a>
+                    </li>               
+                    <li><a href="#quinta">Quinta</a>
+                    </li> 
+                    <li><a href="#sexta">Sexta</a>
+                    </li>               
+                    <li><a href="#sabado">Sábado</a>
+                    </li> 
                 </ul>
                 <!-- Navbar collapsed links -->
                 <ul id="collapsednavbar" class="side-nav">
-                    <li><a href="index.html">Início</a>
-                    </li>
+                    <li><a href="#proxima">Próxima Refeição</a>
+                    </li>                      
                     <li class="divider"></li>
-                    <li><a href="login.html">Login</a>
-                    </li>
-                    <li><a href="cadastro.html">Cadastro</a>
-                    </li>
-                    <li class="divider"></li>
-                    <li><a href="categoria.html?cat=america">América</a>
-                    </li>
-                    <li><a href="categoria.html?cat=asia">Ásia</a>
-                    </li>
-                    <li><a href="categoria.html?cat=europa">Europa</a>
-                    </li>
+                    <li><a href="#segunda">Segunda</a>
+                    </li>               
+                    <li><a href="#terca">Terça</a>
+                    </li>                    
+                    <li><a href="#quarta">Quarta</a>
+                    </li>               
+                    <li><a href="#quinta">Quinta</a>
+                    </li> 
+                    <li><a href="#sexta">Sexta</a>
+                    </li>               
+                    <li><a href="#sabado">Sábado</a>
+                    </li> 
                 </ul>
             </div>
         </div>
@@ -98,43 +89,13 @@
    </section>
 
     <!-- Footer -->
-    <footer class="page-footer deep-purple">
+    <footer class="page-footer cabecalho">
         <div class="container">
-            <div class="row">
-                <div class="col l4 m6 s12 center-align">
-                    <h5 class="white-text">Trank</h5>
-                    <ul>
-                        <li><a class="grey-text text-lighten-3" href="index.html">Página Inicial</a>
-                        </li>
-                        <li><a class="grey-text text-lighten-3" href="sobre.html">Sobre</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col l4 m6 s12 center-align">
-                    <h5 class="white-text">Usuário</h5>
-                    <ul>
-                        <li><a class="grey-text text-lighten-3" href="login.html">Entrar</a>
-                        </li>
-                        <li><a class="grey-text text-lighten-3" href="cadastro.html">Registar</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col l4 m12 s12 center-align">
-                    <h5 class="white-text">Categorias</h5>
-                    <ul>
-                        <li><a class="grey-text text-lighten-3" href="categoria.html?cat=america">América</a>
-                        </li>
-                        <li><a class="grey-text text-lighten-3" href="categoria.html?cat=asia">Ásia</a>
-                        </li>
-                        <li><a class="grey-text text-lighten-3" href="cateogira.html?cat=europa">Europa</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+
         </div>
-        <div class="footer-copyright deep-purple darken-1">
-            <div class="container">
-                © 2015 Matheus Compri e <a href="http://paulomoreno.me">Paulo Moreno</a>
+        <div class="footer-copyright bandejao-red">
+            <div class="container center-align">
+                © 2015 Paulo Moreno
             </div>
         </div>
     </footer>

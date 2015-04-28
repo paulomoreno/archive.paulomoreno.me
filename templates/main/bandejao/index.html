@@ -7,10 +7,92 @@
 
 {% block javascript %}
 <script src='//cdn.goroost.com/roostjs/orlbbgkudkv3wu6l1gjje6u79tpdof86' async></script>
+<script src='{% static "js/bandejao.js" %}' async></script>
 {% endblock %}
 
-{% block title %} - Bandejão{% endblock %}
+{% block title %}Bandejão{% endblock %}
 
 {% block content %}
+ 	<div class="parallax-container">
+     	<div class="parallax"><img src="{% static "img/bandejao/bkg_1.jpg" %}"></div>
+	</div>
 
+	<div class="row container scrollspy center-align" id="proxima">
+		<br/>
+  		<h4 class="grey-text"><i class="mdi-action-settings"></i>  Em Construção</h4>
+		<br/>
+	</div>
+
+ 	<div class="parallax-container">
+     	<div class="parallax"><img src="{% static "img/bandejao/bkg_1.jpg" %}"></div>
+	</div>
+
+
+	<div class="row container scrollspy" id="proxima">
+		<div class="row center-align"><br/>{% include "main/bandejao/load.html" %}</div>
+		<h4 class="grey-text"><img src="{% static "img/bandejao/sun@3x.png" %}" width="30" alt=""> Próxima Refeição<span id="pro-data"></span></h4>
+  		<div class="divider"></div>
+		{% include "main/bandejao/refeicao.html" with short="pro"  periodo=""%}
+		<div class="divider"></div>
+		<br/>
+	</div>
+
+ 	<div class="parallax-container">
+     	<div class="parallax"><img src="{% static "img/bandejao/bkg_2.jpg" %}"></div>
+	</div>
+
+	<div class="row container scrollspy" id="segunda">
+		{% include "main/bandejao/dia.html" with short="seg"  nome="Segunda-Feira"%}
+	</div>
+
+	 <div class="parallax-container">
+     	<div class="parallax"><img src="{% static "img/bandejao/bkg_3.jpg" %}"></div>
+	</div>
+
+	<div class="row container scrollspy" id="terca">
+		{% include "main/bandejao/dia.html" with short="ter"  nome="Terça-Feira"%}
+	</div>
+
+ 	<div class="parallax-container">
+     	<div class="parallax"><img src="{% static "img/bandejao/bkg_2.jpg" %}"></div>
+	</div>
+
+	<div class="row container scrollspy" id="quarta">
+		{% include "main/bandejao/dia.html" with short="qua"  nome="Quarta-Feira"%}
+	</div>
+
+	 <div class="parallax-container">
+     	<div class="parallax"><img src="{% static "img/bandejao/bkg_3.jpg" %}"></div>
+	</div>
+
+	<div class="row container scrollspy" id="quinta">
+		{% include "main/bandejao/dia.html" with short="qui"  nome="Quinta-Feira"%}
+	</div>
+
+
+ 	<div class="parallax-container">
+     	<div class="parallax"><img src="{% static "img/bandejao/bkg_2.jpg" %}"></div>
+	</div>
+
+	<div class="row container scrollspy" id="sexta">
+		{% include "main/bandejao/dia.html" with short="seg"  nome="Sexta-Feira"%}
+	</div>
+
+	 <div class="parallax-container">
+     	<div class="parallax"><img src="{% static "img/bandejao/bkg_3.jpg" %}"></div>
+	</div>
+
+	<div class="row container scrollspy" id="sabado">
+		<h4 class="grey-text">Sábado - <span id="pro-data">dd/mm/aaaa</span></h4>
+		<h4 class="grey-text"><img src="{% static "img/bandejao/sun@3x.png" %}" width="30" alt=""> Almoço</h4>
+
+  		<div class="divider"></div>
+		{% include "main/bandejao/refeicao.html" with short="sab"  periodo="-a"%}
+		<div class="divider"></div>
+		<br/>
+	</div>
+
+	 <div class="parallax-container">
+     	<div class="parallax"><img src="{% static "img/bandejao/bkg_1.jpg" %}"></div>
+	</div>
 {% endblock %}

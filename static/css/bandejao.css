@@ -1,6 +1,15 @@
 @charset "UTF-8";
 /* CSS Document */
 
+.row {
+    margin-bottom: 0;
+}
+
+footer.page-footer {
+    margin-top: 0;
+    padding-top: 0;
+}
+
 .cabecalho{
 	background: #9f0100; /* Old browsers */
 	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
@@ -16,4 +25,32 @@
 
 .bandejao-red{
 	background-color: #9f0100;
+}
+
+.parallax-container:nth-of-type(1){
+	height: 100px;
+}
+
+.parallax-container{
+	height: 200px;
+}
+
+nav.pushpin{
+	z-index: 5;
+}
+
+nav.pushpin.pinned{
+}
+
+.lh26:nth-child(odd) img{
+	margin-bottom: 0;
+	vertical-align: bottom;
+}
+
+.lh26:nth-child(even) img{
+	margin-bottom: 4px;
+	vertical-align: bottom;
+}
+.lh26 img{
+	margin-right: 5px;
 }
