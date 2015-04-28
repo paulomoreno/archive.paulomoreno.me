@@ -1,6 +1,6 @@
 {% load static %}
 
-		<h6 class="lh26"><img src="{% static "img/bandejao/salada@3x.png" %}" width="30" alt=""> <span id="{{ short }}{{ periodo}}-sal">Salada</span></h6>
-		<h6 class="lh26"><img src="{% static "img/bandejao/principal@3x.png" %}" width="30" alt=""> <span id="{{ short }}{{ periodo}}-pri">Principal</span></h6>
-		<h6 class="lh26"><img src="{% static "img/bandejao/complemento@3x.png" %}" width="30" alt=""> <span id="{{ short }}{{ periodo}}-com">Complemento</span></h6>
-		<h6 class="lh26"><img src="{% static "img/bandejao/sobremesa@3x.png" %}" width="30" alt=""> <span id="{{ short }}{{ periodo}}-sob">Sobremesa</span></h6>
+		<h6 class="lh26"><img class="{{ short }}-no" src="{% static "img/bandejao/no@3x.png" %}" width="30" alt=""><img class="{{ short }}-icon hide" src="{% static "img/bandejao/salada@3x.png" %}" width="30" alt=""> <span id="{{ short }}{{ periodo}}-sal">Não há {{periodo_f}} hoje.</span></h6>
+		<h6 class="lh26"><img class="{{ short }}-icon hide"  src="{% static "img/bandejao/principal@3x.png" %}" width="30" alt=""> <span id="{{ short }}{{ periodo}}-pri"></span></h6>
+		<h6 class="lh26"><img class="{{ short }}-icon hide"  src="{% static "img/bandejao/complemento@3x.png" %}" width="30" alt=""> <span id="{{ short }}{{ periodo}}-com"></span></h6>
+		<h6 class="lh26"><img class="{{ short }}-icon hide"  src="{% static "img/bandejao/sobremesa@3x.png" %}" width="30" alt=""> <span id="{{ short }}{{ periodo}}-sob"></span></h6>

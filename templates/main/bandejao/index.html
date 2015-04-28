@@ -9,6 +9,7 @@
 {% block javascript %}
 <script src='//cdn.goroost.com/roostjs/orlbbgkudkv3wu6l1gjje6u79tpdof86' async></script>
 <script src='{% static "js/bandejao.js" %}' async></script>
+<script src='{% static "js/date.js" %}' async></script>
 {% endblock %}
 
 {% block title %}Bandejão{% endblock %}
@@ -32,7 +33,7 @@
 			<h4 class="bandejao-red-text"><img src="{% static "img/bandejao/sun@3x.png" %}" width="30" alt=""> <span id="pro-p"></h4>
 
 	  		<div class="divider"></div>
-			{% include "main/bandejao/refeicao.html" with short="pro"  periodo=""%}
+			{% include "main/bandejao/refeicao.html" with short="pro"  periodo="" periodo_f="refeição"%}
 			<div class="divider"></div>
 			<br/>
 		</div>

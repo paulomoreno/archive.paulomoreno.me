@@ -75,14 +75,23 @@ function write_on_page(dias){
     var proxDiaSemana;
     var prox_sem = false;
 
-    var weekday = new Array(7);
-    weekday[0]=  "Domingo";
-    weekday[1] = "Segunda";
-    weekday[2] = "Terça";
-    weekday[3] = "Quarta";
-    weekday[4] = "Quinta";
-    weekday[5] = "Sexta";
-    weekday[6] = "Sábado";
+    var weekday_pt = new Array(7);
+    weekday_pt[0]=  "Domingo";
+    weekday_pt[1] = "Segunda";
+    weekday_pt[2] = "Terça";
+    weekday_pt[3] = "Quarta";
+    weekday_pt[4] = "Quinta";
+    weekday_pt[5] = "Sexta";
+    weekday_pt[6] = "Sábado";
+
+    var weekday_pt_s = new Array(7);
+    weekday_pt_s[0]=  "domingo";
+    weekday_pt_s[1] = "segunda";
+    weekday_pt_s[2] = "terca";
+    weekday_pt_s[3] = "quarta";
+    weekday_pt_s[4] = "quinta";
+    weekday_pt_s[5] = "sexta";
+    weekday_pt_s[6] = "sabado";
 
     // IF today is greater than saturday lunch
     if ( (diaSemana > 5 && hora >= 13 ) || diaSemana === 0){
@@ -110,22 +119,75 @@ function write_on_page(dias){
         } else {
             periodo = "Almoço";
             proxDiaSemana = diaSemana+1;
-            data = new Date(hoje.getFullYear(),hoje.getMonth(),hoje.getDate()+1);
+            data = Date.parse('tomorrow')
 
         }
 
     }
 
     // Write next meal
-    $('#pro-p').html(weekday[proxDiaSemana] + " / " + periodo);
+    $('#pro-p').html(weekday_pt[proxDiaSemana] + " / " + periodo);
     $('#pro-data').html(date_to_str(data));
 
+
+    var prox_index = weekday_pt_s[proxDiaSemana];
+    var prox_periodo = periodo.replace("ç", "c").toLowerCase();
+
+    write_meal_to_date(dias[prox_index], 'pro', prox_periodo, '', data);
+
     // Write each day
+    for (var i=1; i<=6; i++){
+
+        var dia;
+
+        //
+        if (diaSemana === i){
+            dia = hoje;
+        }else{
+            dia = Date.today().add(i-diaSemana).day()
+        }
+
+        $('#'+weekday_pt_s[i].substring(0,3)+'-data').html(date_to_str(dia));
+
+        write_meal_to_date(dias[weekday_pt_s[i]], weekday_pt_s[i].substring(0,3), 'almoco', '-a', dia);
+
+        if (i != 5){
+            write_meal_to_date(dias[weekday_pt_s[i]], weekday_pt_s[i].substring(0,3), 'jantar', '-j', dia);
+        }
+    }
 
 }
 
 function date_to_str(date){
     return (date.getDate()).toString() + "/" + (date.getMonth() + 1).toString() + "/" + (date.getFullYear()).toString();
+}
+
+function write_meal_to_date(day_json, short_day, periodo, periodo_short, expected_date){
+
+    var dt = (day_json.data);
+    dt = dt.replace(/^\s+|\s+$/g, '').split('/');
+
+    if (date_to_str(new Date(dt[2],dt[1]-1,dt[0])) === date_to_str(expected_date)){
+        var meal = day_json[periodo];
+
+        console.log(short_day);
+
+        if (!meal.vazio && meal.salada){
+
+            $('#'+ short_day + periodo_short +'-sal').html( meal.salada.replace(/^\s+|\s+$/g, '') );
+            $('#'+ short_day + periodo_short +'-pri').html( meal.principal.replace(/^\s+|\s+$/g, '') );
+            $('#'+ short_day + periodo_short +'-com').html( meal.acompanhamento.replace(/^\s+|\s+$/g, '') );
+            $('#'+ short_day + periodo_short +'-sob').html( meal.sobremesa.replace(/^\s+|\s+$/g, '') );
+
+            $('.' + short_day +'-icon').removeClass("hide");
+            $('.' + short_day +'-no').addClass("hide");
+
+        }
+
+
+    } else {
+
+    }
 
 }
 

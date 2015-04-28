@@ -1,11 +1,11 @@
 {% load static %}
 
-		<h4 class="bandejao-red-text">{{ nome }} <small class="right" id="{{ short }}-data">dd/mm/aaaa</small></h4>
+		<h4 class="bandejao-red-text">{{ nome }} <small class="right" id="{{ short }}-data"></small></h4>
 
 		<h5 class="bandejao-red-text"><img src="{% static "img/bandejao/sun@3x.png" %}" width="30" alt=""> Almoço</h5>
   		<div class="divider"></div>
 
-        {% include "main/bandejao/refeicao.html" with short=short  periodo="-a"%}
+        {% include "main/bandejao/refeicao.html" with short=short  periodo="-a" periodo_f="almoço"%}
 
 		<div class="divider"></div>
 		<br/>
@@ -14,7 +14,7 @@
 		<h5 class="bandejao-red-text"><img src="{% static "img/bandejao/moon@3x.png" %}" width="30" alt=""> Jantar</h5>
   		<div class="divider"></div>
 
-        {% include "main/bandejao/refeicao.html" with short=short  periodo="-j"%}
+        {% include "main/bandejao/refeicao.html" with short=short  periodo="-j" periodo_f="jantar"%}
 
 		<div class="divider"></div>
 		<br/>
