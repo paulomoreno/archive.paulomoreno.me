@@ -10,6 +10,14 @@ footer.page-footer {
     padding-top: 0;
 }
 
+.my_load{
+	padding-top: 14px;
+}
+
+.my_load:hover{
+	background-color: transparent;
+}
+
 .cabecalho{
 	background: #9f0100; /* Old browsers */
 	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
