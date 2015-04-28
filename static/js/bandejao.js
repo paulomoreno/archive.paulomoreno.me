@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	$(".button-collapse").sideNav();
-    $('.parallax').parallax();
+    //$('.parallax').parallax();
     $('.scrollspy').scrollSpy();
     $('.pushpin').pushpin({ top: $('header').height() });
     $('.pushpin').bind('cssClassChanged',function(){
