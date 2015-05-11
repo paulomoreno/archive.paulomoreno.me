@@ -59,6 +59,10 @@ function load_bandeco(){
         $('#modal_load').delay().closeModal();
     });
 
+        $('#btn').click(function(){
+            carregaGoogleImage("carne");
+        });
+
 }
 
 function write_on_page(dias){
@@ -125,6 +129,9 @@ function write_on_page(dias){
 
     }
 
+    //Select tabBar according to today
+    $('ul.tabs').tabs('select_tab', weekday_pt_s[proxDiaSemana]);
+
     // Write next meal
     $('#pro-p').html(weekday_pt[proxDiaSemana] + " / " + periodo);
     $('#pro-data').html(date_to_str(data));
@@ -182,8 +189,16 @@ function write_meal_to_date(day_json, short_day, periodo, periodo_short, expecte
             $('.' + short_day +'-icon').removeClass("hide");
             $('.' + short_day +'-no').addClass("hide");
 
-        }
+            $('span[id^='+ short_day + periodo_short +']').each(function(){
 
+                if (!($(this).text().toLowerCase().slice(0, 3) === 'não')){
+                    $(this).addClass('si');
+                    $(this).click(function(){
+                        carregaGoogleImage($(this).text());
+                    });
+                }
+            });
+        }
 
     } else {
 
@@ -191,23 +206,17 @@ function write_meal_to_date(day_json, short_day, periodo, periodo_short, expecte
 
 }
 
+function carregaGoogleImage(query){
 
-// Fix from http://stackoverflow.com/questions/1950038/jquery-fire-event-if-css-class-changed
-// to add a new "cssClassChanged" trigger
+    //$('#iframe_google').attr('src','http://www.uol.com.br');
+  $('#modal_googleImages').openModal();
 
-// Create a closure
-(function(){
-    // Your base, I'm in it!
-    var originalAddClassMethod = jQuery.fn.addClass;
+  $("#modal_imgs").html("");
 
-    jQuery.fn.addClass = function(){
-        // Execute the original method.
-        var result = originalAddClassMethod.apply( this, arguments );
-
-        // trigger a custom event
-        jQuery(this).trigger('cssClassChanged');
-
-        // return the original result
-        return result;
-    }
-})();
+    $.getJSON("https://ajax.googleapis.com/ajax/services/search/images?callback=?",{q:query,v:'1.0'},function(data){
+        for (var i=0; i<=4; i++){
+            $("#modal_imgs").append('<img class="bi" src="'+data.responseData.results[i].url+'">');
+        }
+      
+    });
+}
