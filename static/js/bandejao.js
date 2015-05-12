@@ -1,4 +1,5 @@
 $(document).ready(function(){
+
 	$(".button-collapse").sideNav();
     //$('.parallax').parallax();
     $('ul.tabs').tabs();
@@ -214,7 +215,7 @@ function carregaGoogleImage(query){
   $("#modal_imgs").html("");
 
     $.getJSON("https://ajax.googleapis.com/ajax/services/search/images?callback=?",{q:query,v:'1.0'},function(data){
-        for (var i=0; i<=4; i++){
+        for (var i=0; i<=10; i++){
             $("#modal_imgs").append('<img class="bi" src="'+data.responseData.results[i].url+'">');
         }
       
