@@ -159,7 +159,7 @@ function write_on_page(dias){
 
         write_meal_to_date(dias[weekday_pt_s[i]], weekday_pt_s[i].substring(0,3), 'almoco', '-a', dia);
 
-        if (i != 5){
+        if (i != 6 && i != 0){
             write_meal_to_date(dias[weekday_pt_s[i]], weekday_pt_s[i].substring(0,3), 'jantar', '-j', dia);
         }
     }
