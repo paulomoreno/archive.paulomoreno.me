@@ -39,6 +39,11 @@
 
 .center_text_small{
 	font-size: 12pt;
+
+	padding-top: 10px;
+	padding: 5px;
+	background-color: rgba(0,0,0,0.75);
+
 }
 .m_btm_ctr{
 	width: 60%;
@@ -92,4 +97,3 @@
 	color: #444444;
 	font-size: 14pt;
 }
-
