@@ -80,7 +80,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
-
+STATIC_ROOT = PROJECT_DIR.joinpath('static').as_posix()
 STATIC_URL = '/static/'
 
 # Indicates the local filesystem path for Django to get static files
