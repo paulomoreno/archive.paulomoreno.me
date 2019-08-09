@@ -1,1 +1,1 @@
-gunicorn paulomoreno.wsgi:application
+web: gunicorn paulomoreno.wsgi:application
